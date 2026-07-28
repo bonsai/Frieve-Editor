@@ -1,0 +1,154 @@
+:root {
+  color-scheme: dark;
+  --bg: #080a10;
+  --panel: rgba(15, 19, 30, 0.82);
+  --panel-strong: rgba(9, 12, 20, 0.96);
+  --line: rgba(255, 255, 255, 0.10);
+  --text: #eef2ff;
+  --muted: rgba(238, 242, 255, 0.7);
+  --accent: #8be9fd;
+  --accent-2: #f2c66d;
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  --radius: 22px;
+  font-family: "Segoe UI", "Yu Gothic UI", "Hiragino Kaku Gothic ProN", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% 10%, rgba(139, 233, 253, 0.18), transparent 25%),
+    radial-gradient(circle at 85% 20%, rgba(242, 198, 109, 0.16), transparent 24%),
+    radial-gradient(circle at 50% 85%, rgba(157, 255, 131, 0.10), transparent 28%),
+    linear-gradient(180deg, #05070d 0%, #090d16 100%);
+}
+
+body {
+  padding: 32px 18px 48px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+.hero,
+.card {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+.hero {
+  padding: 34px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--accent);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5vw, 4.5rem);
+  line-height: 0.98;
+  max-width: 13ch;
+}
+
+.lede {
+  max-width: 62ch;
+  color: var(--muted);
+  font-size: 1.03rem;
+  line-height: 1.7;
+  margin: 18px 0 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.button.primary {
+  border-color: rgba(139, 233, 253, 0.35);
+  background: linear-gradient(180deg, rgba(139, 233, 253, 0.22), rgba(139, 233, 253, 0.10));
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  padding: 24px;
+}
+
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 1.05rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.card.wide {
+  grid-column: 1 / -1;
+}
+
+code {
+  padding: 0.18rem 0.42rem;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+@media (max-width: 760px) {
+  body {
+    padding: 18px 14px 36px;
+  }
+
+  .hero,
+  .card {
+    padding: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

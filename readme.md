@@ -26,6 +26,11 @@ Unzip the downloaded zip file and run the exe file to launch the app. No install
 
 Open the help from the Help menu in the Frieve Editor, and read the usage guide created by Frieve Editor.
 
+## GitHub Pages
+
+A static project site is published from `docs/` via GitHub Actions. It mirrors the
+overview, download, and build links for the desktop app.
+
 
 ## How to build
 
